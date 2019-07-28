@@ -23,6 +23,7 @@ public class RoomReserve implements Serializable{
 	private java.util.Date startdate;//开始时间
 	private java.util.Date enddate;//结束时间
 	private String content;//内容
+	private Integer state;//审核状态
 
 	
 	public String getId() {		
@@ -67,6 +68,11 @@ public class RoomReserve implements Serializable{
 		this.content = content;
 	}
 
+	public Integer getState() {
+		return state;
+	}
 
-	
+	public void setState(Integer state) {
+		this.state = state;
+	}
 }
