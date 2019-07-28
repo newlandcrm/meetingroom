@@ -1,8 +1,6 @@
 package com.nlmeetingroom.pojo;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 /**
  * 实体类
@@ -20,8 +18,9 @@ public class Floor implements Serializable{
 	
 	private String describe;//描述
 	private Integer floor;//楼层
-	private String buildingid;//所属楼
-
+	@ManyToOne(targetEntity = Building.class)
+	@JoinColumn(name = "buildingid",referencedColumnName = "id")
+	private Building building;
 	
 	public String getId() {		
 		return id;
@@ -44,13 +43,11 @@ public class Floor implements Serializable{
 		this.floor = floor;
 	}
 
-	public String getBuildingid() {		
-		return buildingid;
-	}
-	public void setBuildingid(String buildingid) {
-		this.buildingid = buildingid;
+	public Building getBuilding() {
+		return building;
 	}
 
-
-	
+	public void setBuilding(Building building) {
+		this.building = building;
+	}
 }

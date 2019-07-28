@@ -1,8 +1,6 @@
 package com.nlmeetingroom.pojo;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 /**
  * 实体类
@@ -27,7 +25,9 @@ public class User implements Serializable{
 	private java.util.Date regdate;//注册日期
 	private java.util.Date lastdate;//最后登陆日期
 	private String roleid;//角色：初期暂定0 普通1 管理员 后期再加哥角色表
-	private String departmentid;//所属部门id
+	@ManyToOne(targetEntity = Department.class)
+	@JoinColumn(name = "departmentid",referencedColumnName = "id")
+	private Department department;//所属部门id
 
 	
 	public String getId() {		
@@ -100,13 +100,11 @@ public class User implements Serializable{
 		this.roleid = roleid;
 	}
 
-	public String getDepartmentid() {		
-		return departmentid;
-	}
-	public void setDepartmentid(String departmentid) {
-		this.departmentid = departmentid;
+	public Department getDepartment() {
+		return department;
 	}
 
-
-	
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
 }

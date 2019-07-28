@@ -1,8 +1,6 @@
 package com.nlmeetingroom.pojo;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 /**
  * 实体类
@@ -17,9 +15,12 @@ public class RoomReserve implements Serializable{
 	private String id;//
 
 
-	
-	private String userid;//申请人id
-	private String roomid;//会议室id
+	@ManyToOne(targetEntity = User.class)
+	@JoinColumn(name = "userid",referencedColumnName = "id")
+	private User user;//申请人
+	@ManyToOne(targetEntity = Room.class)
+	@JoinColumn(name = "roomid",referencedColumnName = "id")
+	private Room room;//会议室
 	private java.util.Date startdate;//开始时间
 	private java.util.Date enddate;//结束时间
 	private String content;//内容
@@ -33,21 +34,23 @@ public class RoomReserve implements Serializable{
 		this.id = id;
 	}
 
-	public String getUserid() {		
-		return userid;
-	}
-	public void setUserid(String userid) {
-		this.userid = userid;
+	public User getUser() {
+		return user;
 	}
 
-	public String getRoomid() {		
-		return roomid;
-	}
-	public void setRoomid(String roomid) {
-		this.roomid = roomid;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
-	public java.util.Date getStartdate() {		
+	public Room getRoom() {
+		return room;
+	}
+
+	public void setRoom(Room room) {
+		this.room = room;
+	}
+
+	public java.util.Date getStartdate() {
 		return startdate;
 	}
 	public void setStartdate(java.util.Date startdate) {

@@ -1,7 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e14ae490-bf44-4df6-a52d-99145b78233d" name="Default" comment="" />
+    <list default="true" id="e14ae490-bf44-4df6-a52d-99145b78233d" name="Default" comment="测试">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/nlmeetingroom_common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/nlmeetingroom_common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_common/target/nlmeetingroom_common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/nlmeetingroom_common/target/nlmeetingroom_common-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Floor.java" beforeDir="false" afterPath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Floor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/RoomReserve.java" beforeDir="false" afterPath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/RoomReserve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/controller/BaseExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/controller/BuildingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/controller/DepartmentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/controller/FloorController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/controller/RoomController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/controller/RoomReserveController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/dao/BuildingDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/dao/DepartmentDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/dao/FloorDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/dao/RoomDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/dao/RoomReserveDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/dao/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/pojo/Building.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/pojo/Department.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/pojo/Floor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/pojo/Room.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/pojo/RoomReserve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/pojo/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/service/BuildingService$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/service/BuildingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/service/DepartmentService$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/service/DepartmentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/service/FloorService$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/service/FloorService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/service/RoomReserveService$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/service/RoomReserveService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/service/RoomService$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/service/RoomService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/service/UserService$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/classes/com/nlmeetingroom/user/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/nlmeetingroom_user/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/nlmeetingroom_user/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/target/nlmeetingroom_user-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/nlmeetingroom_user/target/nlmeetingroom_user-1.0-SNAPSHOT.jar" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/nlmeetingroom_user/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/nlmeetingroom_common/target/" />
@@ -28,79 +75,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nlmeetingroom_common/pom.xml">
+      <file leaf-file-name="Floor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Floor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" selection-start-line="1" selection-end-line="2" />
+            <state relative-caret-position="506">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-299">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://C:/ITtools/maven/apache-maven-3.5.4/conf/settings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1150">
-              <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nlmeetingroom_user.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/nlmeetingroom_user.iml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="nlmeetingroom_common.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nlmeetingroom_common/nlmeetingroom_common.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1794">
-              <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseExceptionHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/BaseExceptionHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BuildingController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BuildingController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/BuildingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1820">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="1449">
+              <caret line="81" column="26" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,9 +96,109 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="BuildingService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/BuildingService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1403">
+              <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Room.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Room.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+              <folding>
+                <element signature="e#1101#1102#0" expanded="true" />
+                <element signature="e#1120#1121#0" expanded="true" />
+                <element signature="e#1158#1159#0" expanded="true" />
+                <element signature="e#1183#1184#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoomReserve.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/RoomReserve.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="23" column="43" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+              <folding>
+                <element signature="e#758#759#0" expanded="true" />
+                <element signature="e#776#777#0" expanded="true" />
+                <element signature="e#811#812#0" expanded="true" />
+                <element signature="e#834#835#0" expanded="true" />
+                <element signature="e#860#861#0" expanded="true" />
+                <element signature="e#878#879#0" expanded="true" />
+                <element signature="e#913#914#0" expanded="true" />
+                <element signature="e#936#937#0" expanded="true" />
+                <element signature="e#1305#1306#0" expanded="true" />
+                <element signature="e#1324#1325#0" expanded="true" />
+                <element signature="e#1364#1365#0" expanded="true" />
+                <element signature="e#1389#1390#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+              <folding>
+                <element signature="e#1982#1983#0" expanded="true" />
+                <element signature="e#2006#2007#0" expanded="true" />
+                <element signature="e#2059#2060#0" expanded="true" />
+                <element signature="e#2094#2095#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="37" selection-start-column="37" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1909">
+              <caret line="109" column="65" selection-start-line="109" selection-start-column="56" selection-end-line="109" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+              <folding>
+                <element signature="e#312#313#0" expanded="true" />
+                <element signature="e#365#366#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FloorController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/FloorController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -123,7 +211,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -133,6 +221,12 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/nlmeetingroom_common/pom.xml" />
         <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/BuildingController.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Floor.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Room.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/UserService.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/RoomReserve.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/User.java" />
       </list>
     </option>
   </component>
@@ -151,6 +245,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="localRepository" value="C:\ITtools\maven\personlocalrepository" />
         <option name="mavenHome" value="C:/ITtools/maven/apache-maven-3.5.4" />
         <option name="userSettingsFile" value="C:\ITtools\maven\apache-maven-3.5.4\conf\settings.xml" />
       </MavenGeneralSettings>
@@ -184,7 +279,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="415" />
     <option name="y" value="345" />
     <option name="width" value="1215" />
@@ -196,8 +291,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -206,48 +299,19 @@
               <item name="nlmeetingroom_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="nlmeetingroom_parent" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="nlmeetingroom_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nlmeetingroom_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="nlmeetingroom_user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nlmeetingroom_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nlmeetingroom_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="nlmeetingroom_user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nlmeetingroom_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nlmeetingroom_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="nlmeetingroom_user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nlmeetingroom_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nlmeetingroom_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="nlmeetingroom_user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nlmeetingroom_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nlmeetingroom_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="nlmeetingroom_user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="nlmeetingroom" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -256,7 +320,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.43021202" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -301,9 +365,15 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="nlmeetingroom_user" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nlmeetingroom.user.Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nlmeetingroom.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nlmeetingroom.Application" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -328,11 +398,12 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Application.Test" />
+      <item itemvalue="Spring Boot.Application" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.Application" />
         <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
@@ -351,14 +422,34 @@
       <workItem from="1564035119820" duration="564000" />
       <workItem from="1564035704818" duration="3534000" />
       <workItem from="1564209113959" duration="4025000" />
+      <workItem from="1564215880452" duration="515000" />
+      <workItem from="1564223914501" duration="25000" />
+      <workItem from="1564278232592" duration="3923000" />
+      <workItem from="1564299337676" duration="3639000" />
     </task>
+    <task id="LOCAL-00001" summary="测试">
+      <created>1564216066727</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1564216066727</updated>
+    </task>
+    <task id="LOCAL-00002" summary="用户预定会议室表增加 审核字段">
+      <created>1564278531287</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1564278531287</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8528000" />
+    <option name="totallyTimeSpent" value="16630000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
@@ -378,12 +469,12 @@
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.36209336" />
       <window_info anchor="bottom" id="Spring" order="11" weight="0.32909605" />
       <window_info anchor="bottom" id="CheckStyle" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.32909605" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25938338" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2935657" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3297587" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -394,41 +485,6 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="2" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.4180791" />
-      <window_info anchor="bottom" id="Spring" order="11" weight="0.32909605" />
-      <window_info id="Image Layers" order="3" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.32909605" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="CheckStyle" order="12" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="right" id="Maven Projects" order="9" weight="0.36729223" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25938338" />
-      <window_info anchor="right" id="Database" order="5" weight="0.3297587" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info id="Web" order="6" side_tool="true" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="right" id="Bean Validation" order="8" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -436,7 +492,108 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="测试" />
+    <MESSAGE value="用户预定会议室表增加 审核字段" />
+    <option name="LAST_COMMIT_MESSAGE" value="用户预定会议室表增加 审核字段" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/BuildingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ITtools/maven/apache-maven-3.5.4/conf/settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1150">
+          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/nlmeetingroom_user.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_common/nlmeetingroom_common.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1794">
+          <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/BaseExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/BuildingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nlmeetingroom_common/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -548,16 +705,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/user/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/user/Test.java" />
     <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -567,7 +715,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-299">
+        <state relative-caret-position="943">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
@@ -582,26 +730,150 @@
     <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/Application.java">
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/dao/BuildingDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="207">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Building.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/RoomReserveController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/BaseExceptionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
+        <state relative-caret-position="138">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/DepartmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/RoomController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/FloorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Floor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/BuildingController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1820">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="1449">
+          <caret line="81" column="26" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/BuildingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1403">
+          <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1909">
+          <caret line="109" column="65" selection-start-line="109" selection-start-column="56" selection-end-line="109" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="37" selection-start-column="37" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="e#1101#1102#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+            <element signature="e#1183#1184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/RoomReserve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="23" column="43" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <folding>
+            <element signature="e#758#759#0" expanded="true" />
+            <element signature="e#776#777#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#834#835#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#1305#1306#0" expanded="true" />
+            <element signature="e#1324#1325#0" expanded="true" />
+            <element signature="e#1364#1365#0" expanded="true" />
+            <element signature="e#1389#1390#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <folding>
+            <element signature="e#1982#1983#0" expanded="true" />
+            <element signature="e#2006#2007#0" expanded="true" />
+            <element signature="e#2059#2060#0" expanded="true" />
+            <element signature="e#2094#2095#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -28,8 +28,18 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
-	
-	
+
+	@RequestMapping(value="/login",method=RequestMethod.POST)
+	public Result login(@RequestBody Map searchMap ){
+		System.out.println(searchMap.get("username"));
+		System.out.println(searchMap.get("password"));
+		searchMap.put("token","asdasds");
+
+		return  new Result(true,StatusCode.OK,"登录成功",searchMap );
+	}
+
+
+
 	/**
 	 * 查询全部数据
 	 * @return
