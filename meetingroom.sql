@@ -27,6 +27,10 @@ CREATE TABLE `building` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+/*Data for the table `building` */
+
+insert  into `building`(`id`,`name`,`sort`) values ('12312','test1','4'),('123123','test3','2'),('12344','test4','6'),('123563463','B楼','4'),('1251','test2','2'),('2123123','弘卓楼','5');
+
 /*Table structure for table `department` */
 
 DROP TABLE IF EXISTS `department`;
@@ -37,6 +41,10 @@ CREATE TABLE `department` (
   `another` varchar(30) DEFAULT NULL COMMENT '预留字段',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `department` */
+
+insert  into `department`(`id`,`name`,`another`) values ('123','CRM产品',NULL),('124','大数据项建',NULL);
 
 /*Table structure for table `floor` */
 
@@ -51,6 +59,10 @@ CREATE TABLE `floor` (
   KEY `buildingid` (`buildingid`),
   CONSTRAINT `floor_ibfk_1` FOREIGN KEY (`buildingid`) REFERENCES `building` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `floor` */
+
+insert  into `floor`(`id`,`describe`,`floor`,`buildingid`) values ('123123','一楼',1,'2123123'),('6234','一楼',1,'123563463');
 
 /*Table structure for table `room` */
 
@@ -67,6 +79,10 @@ CREATE TABLE `room` (
   KEY `room_ibfk_1` (`floorid`),
   CONSTRAINT `room_ibfk_1` FOREIGN KEY (`floorid`) REFERENCES `floor` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `room` */
+
+insert  into `room`(`id`,`name`,`floorid`,`capacity`,`addr`,`openstate`) values ('111','B楼一楼大厅','123123',100,'B楼咖啡厅旁',1);
 
 /*Table structure for table `user` */
 
@@ -89,6 +105,10 @@ CREATE TABLE `user` (
   CONSTRAINT `user_ibfk_1` FOREIGN KEY (`departmentid`) REFERENCES `department` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户';
 
+/*Data for the table `user` */
+
+insert  into `user`(`id`,`username`,`mobile`,`password`,`nickname`,`avatar`,`email`,`regdate`,`lastdate`,`roleid`,`departmentid`) values ('123','abc','110','123456','测试人员1',NULL,NULL,NULL,NULL,NULL,'123'),('124','bbb','120','123456','测试人员2',NULL,NULL,NULL,NULL,NULL,'124');
+
 /*Table structure for table `user_room_reserve` */
 
 DROP TABLE IF EXISTS `user_room_reserve`;
@@ -107,6 +127,10 @@ CREATE TABLE `user_room_reserve` (
   CONSTRAINT `user_room_reserve_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `user` (`id`),
   CONSTRAINT `user_room_reserve_ibfk_2` FOREIGN KEY (`roomid`) REFERENCES `room` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `user_room_reserve` */
+
+insert  into `user_room_reserve`(`id`,`userid`,`roomid`,`startdate`,`enddate`,`content`,`state`) values ('2131','123','111','2019-07-03 16:15:20','2019-07-03 17:15:27','BMT业务组迭代回顾会',0),('2222','124','111','2019-07-05 16:16:00','2019-07-05 18:16:06','大合唱练习',0);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
