@@ -10,7 +10,9 @@ import java.io.Serializable;
 @Entity
 @Table(name="user_room_reserve")
 public class RoomReserve implements Serializable{
-
+	public static final Integer EXAMINE_STATE_NOT_EXAMINE=0;//未审核
+	public static final Integer EXAMINE_STATE_SUCCESS=1;//审核 成功
+	public static final Integer EXAMINE_STATE_FAIL=2;//审核 未通过
 	@Id
 	private String id;//
 
@@ -21,13 +23,33 @@ public class RoomReserve implements Serializable{
 	@ManyToOne(targetEntity = Room.class)
 	@JoinColumn(name = "roomid",referencedColumnName = "id")
 	private Room room;//会议室
+	@Column(insertable = false, updatable = false)
+	private String roomid;
+	@Column(insertable = false, updatable = false)
+	private String userid;
+
 	private java.util.Date startdate;//开始时间
 	private java.util.Date enddate;//结束时间
 	private String content;//内容
 	private Integer state;//审核状态
 
-	
-	public String getId() {		
+	public String getRoomid() {
+		return roomid;
+	}
+
+	public void setRoomid(String roomid) {
+		this.roomid = roomid;
+	}
+
+	public String getUserid() {
+		return userid;
+	}
+
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
+
+	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
@@ -77,5 +99,20 @@ public class RoomReserve implements Serializable{
 
 	public void setState(Integer state) {
 		this.state = state;
+	}
+
+	@Override
+	public String toString() {
+		return "RoomReserve{" +
+				"id='" + id + '\'' +
+				", user=" + user +
+				", room=" + room +
+				", roomid='" + roomid + '\'' +
+				", userid='" + userid + '\'' +
+				", startdate=" + startdate +
+				", enddate=" + enddate +
+				", content='" + content + '\'' +
+				", state=" + state +
+				'}';
 	}
 }

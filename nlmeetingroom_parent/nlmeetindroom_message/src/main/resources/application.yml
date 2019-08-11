@@ -1,0 +1,10 @@
+server:
+  port: 9009
+spring:
+  application:
+    name: nlmeetingroom-message #指定服务名
+  rabbitmq:
+    host: 114.55.101.174
+    username: admin
+    password: admin
+    virtual-host: my_vhost

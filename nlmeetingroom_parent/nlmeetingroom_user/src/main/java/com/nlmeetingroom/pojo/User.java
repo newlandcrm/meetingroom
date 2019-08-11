@@ -13,9 +13,6 @@ public class User implements Serializable{
 
 	@Id
 	private String id;//ID
-
-
-	
 	private String username;//账号
 	private String mobile;//手机号码
 	private String password;//密码
@@ -24,13 +21,22 @@ public class User implements Serializable{
 	private String email;//E-Mail
 	private java.util.Date regdate;//注册日期
 	private java.util.Date lastdate;//最后登陆日期
-	private String roleid;//角色：初期暂定0 普通1 管理员 后期再加哥角色表
+	private String roleid;//角色：初期暂定0 普通1 管理员
+	@Column(insertable = false, updatable = false)
+	private String departmentid;
 	@ManyToOne(targetEntity = Department.class)
 	@JoinColumn(name = "departmentid",referencedColumnName = "id")
 	private Department department;//所属部门id
 
-	
-	public String getId() {		
+	public String getDepartmentid() {
+		return departmentid;
+	}
+
+	public void setDepartmentid(String departmentid) {
+		this.departmentid = departmentid;
+	}
+
+	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
@@ -106,5 +112,22 @@ public class User implements Serializable{
 
 	public void setDepartment(Department department) {
 		this.department = department;
+	}
+
+	@Override
+	public String toString() {
+		return "User{" +
+				"id='" + id + '\'' +
+				", username='" + username + '\'' +
+				", mobile='" + mobile + '\'' +
+				", password='" + password + '\'' +
+				", nickname='" + nickname + '\'' +
+				", avatar='" + avatar + '\'' +
+				", email='" + email + '\'' +
+				", regdate=" + regdate +
+				", lastdate=" + lastdate +
+				", roleid='" + roleid + '\'' +
+				", department=" + department +
+				'}';
 	}
 }

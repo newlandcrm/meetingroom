@@ -10,5 +10,5 @@ import com.nlmeetingroom.pojo.User;
  *
  */
 public interface UserDao extends JpaRepository<User,String>,JpaSpecificationExecutor<User>{
-	
+	public User findByUsernameAndRoleid(String name,String rowid);
 }

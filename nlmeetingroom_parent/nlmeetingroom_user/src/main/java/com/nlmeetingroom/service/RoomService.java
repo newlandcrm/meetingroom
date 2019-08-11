@@ -82,6 +82,7 @@ public class RoomService {
 	 * @param room
 	 */
 	public void add(Room room) {
+
 		room.setId( idWorker.nextId()+"" );
 		roomDao.save(room);
 	}

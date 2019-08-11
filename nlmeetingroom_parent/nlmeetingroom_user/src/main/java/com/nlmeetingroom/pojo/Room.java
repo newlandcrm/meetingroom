@@ -20,11 +20,21 @@ public class Room implements Serializable{
 	private Integer capacity;//会议室容量
 	private String addr;//会议室地址
 	private Integer openstate;//开放状态1:开放 0：不开放
+	@Column(insertable = false, updatable = false)
+	private String floorid;
 	@ManyToOne(targetEntity = Floor.class)
 	@JoinColumn(name = "floorid",referencedColumnName = "id")
 	private Floor floor;
-	
-	public String getId() {		
+
+	public String getFloorid() {
+		return floorid;
+	}
+
+	public void setFloorid(String floorid) {
+		this.floorid = floorid;
+	}
+
+	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
@@ -65,5 +75,18 @@ public class Room implements Serializable{
 
 	public void setFloor(Floor floor) {
 		this.floor = floor;
+	}
+
+	@Override
+	public String toString() {
+		return "Room{" +
+				"id='" + id + '\'' +
+				", name='" + name + '\'' +
+				", capacity=" + capacity +
+				", addr='" + addr + '\'' +
+				", openstate=" + openstate +
+				", floorid='" + floorid + '\'' +
+				", floor=" + floor +
+				'}';
 	}
 }

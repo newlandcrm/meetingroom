@@ -1,6 +1,7 @@
 package com.nlmeetingroom.service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import util.IdWorker;
@@ -34,6 +36,48 @@ public class UserService {
 	
 	@Autowired
 	private IdWorker idWorker;
+
+    @Autowired
+    BCryptPasswordEncoder encoder;
+
+	//修改密码
+	public void updatePassword(Map searchMap) {
+		String userid= (String) searchMap.get("userid");
+		String oldpassword= (String) searchMap.get("oldpassword");
+		String newpassword= (String) searchMap.get("newpassword");
+		newpassword = encoder.encode(newpassword);//加密后的密码
+
+		System.out.println("旧密码"+oldpassword);
+		User user = userDao.findById(userid).get();
+
+		if(user!=null && encoder.matches(oldpassword,user.getPassword())){
+			user.setPassword(newpassword);
+			userDao.save(user);
+		}else{
+			throw new RuntimeException("密码错误");
+		}
+
+
+
+	}
+	/**
+	 * 根据账号和密码查询管理员
+	 * @param userName
+	 * @param password
+	 * @return
+	 */
+	public User loginByUsernameAndPassword(String userName,String password,String flag){
+		User user = userDao.findByUsernameAndRoleid(userName,flag);
+		if(user!=null && encoder.matches(password,user.getPassword())){
+			user.setLastdate(new Date());//最后登陆日期
+			userDao.save(user);
+			return user;
+		}else{
+			return null;
+		}
+	}
+
+
 
 	/**
 	 * 查询全部列表
@@ -81,9 +125,19 @@ public class UserService {
 	 * 增加
 	 * @param user
 	 */
-	public void add(User user) {
+	public void add(User user) throws Exception {
+		User user1 = userDao.findByUsernameAndRoleid(user.getUsername(), "0");
+		if (user1!=null){
+			throw new Exception("该用户已存在");
+		}
 		user.setId( idWorker.nextId()+"" );
-		userDao.save(user);
+        user.setRegdate(new Date());//注册日期
+        user.setLastdate(new Date());//最后登陆日期
+		user.setRoleid("0");
+        //密码加密
+        String newpassword = encoder.encode(user.getPassword());//加密后的密码
+        user.setPassword(newpassword);
+        userDao.save(user);
 	}
 
 	/**

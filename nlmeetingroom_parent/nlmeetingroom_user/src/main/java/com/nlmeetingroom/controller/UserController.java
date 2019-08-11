@@ -1,6 +1,8 @@
 package com.nlmeetingroom.controller;
+import java.util.HashMap;
 import java.util.Map;
 
+import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -16,6 +18,8 @@ import com.nlmeetingroom.service.UserService;
 import entity.PageResult;
 import entity.Result;
 import entity.StatusCode;
+import util.JwtUtil;
+
 /**
  * 控制器层
  * @author Administrator
@@ -28,16 +32,86 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
+	@Autowired
+	JwtUtil jwtUtil;
+	/**
+	 * 用户登陆
 
-	@RequestMapping(value="/login",method=RequestMethod.POST)
-	public Result login(@RequestBody Map searchMap ){
-		System.out.println(searchMap.get("username"));
-		System.out.println(searchMap.get("password"));
-		searchMap.put("token","asdasds");
+	 * @return
+	 */
+	/**
+	 * 修改密码
+	 * @param
+	 */
+	@RequestMapping(value="/password",method= RequestMethod.PUT)
+	public Result updatePassword(@RequestBody Map searchMap){
+		System.out.println(searchMap);
+		userService.updatePassword(searchMap);
 
-		return  new Result(true,StatusCode.OK,"登录成功",searchMap );
+		return new Result(true,StatusCode.OK,"修改成功");
 	}
 
+	@RequestMapping(value="/login",method=RequestMethod.POST)
+	public Result login(@RequestBody Map<String,String> loginMap){
+		User user = userService.loginByUsernameAndPassword(loginMap.get("username"),loginMap.get("password"),"0");
+		if(user!=null){
+			String token = jwtUtil.createJWT(user.getId(),user.getNickname(), "user");
+			Map map=new HashMap();
+			map.put("token",token);
+			map.put("userid",user.getId());
+			map.put("nickname",user.getNickname());//昵称
+			map.put("avatar",user.getAvatar());//头像
+			return new Result(true,StatusCode.OK,"登陆成功",map);
+		}else{
+			return new Result(false,StatusCode.LOGINERROR,"用户名或密码错误");
+		}
+	}
+
+	/**
+	 * 管理员登陆
+
+	 * @return
+	 */
+
+	@RequestMapping(value="/admin/login",method=RequestMethod.POST)
+	public Result adminLogin(@RequestBody Map<String,String> loginMap){
+		User user = userService.loginByUsernameAndPassword(loginMap.get("username"),loginMap.get("password"),"1");
+		if(user!=null){
+			String token = jwtUtil.createJWT(user.getId(),user.getNickname(), "admin");
+			Map map=new HashMap();
+			map.put("token",token);
+			map.put("id",user.getId());
+			map.put("name",user.getNickname());//昵称
+			map.put("avatar",user.getAvatar());//头像
+			return new Result(true,StatusCode.OK,"登陆成功",map);
+		}else{
+			return new Result(false,StatusCode.LOGINERROR,"用户名或密码错误");
+		}
+	}
+
+	@RequestMapping(value="/info",method=RequestMethod.POST)
+	public Result getInfo(@RequestBody Map<String,String> getInfoMap){
+		String token = getInfoMap.get("token");
+		Claims claims = jwtUtil.parseJWT(token);
+		if(claims==null){
+			return new Result(false,StatusCode.ACCESSERROR,"权限不足");
+		}
+		String id = claims.getId();
+		User user = userService.findById(id);
+		System.out.println(user.toString());
+		return new Result(true,StatusCode.OK,"success",user);
+
+	}
+	/**
+	 * 注册
+	 * @param user
+	 * @return
+	 */
+	@RequestMapping(value="/register",method=RequestMethod.POST)
+	public Result register( @RequestBody User user ) throws Exception {
+		userService.add(user);
+		return new Result(true,StatusCode.OK,"注册成功");
+	}
 
 
 	/**
@@ -83,15 +157,7 @@ public class UserController {
         return new Result(true,StatusCode.OK,"查询成功",userService.findSearch(searchMap));
     }
 	
-	/**
-	 * 增加
-	 * @param user
-	 */
-	@RequestMapping(method=RequestMethod.POST)
-	public Result add(@RequestBody User user  ){
-		userService.add(user);
-		return new Result(true,StatusCode.OK,"增加成功");
-	}
+
 	
 	/**
 	 * 修改

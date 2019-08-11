@@ -13,34 +13,41 @@ public class Floor implements Serializable{
 
 	@Id
 	private String id;//
-
-
-	
-	private String describe;//描述
-	private Integer floor;//楼层
+	@Column(insertable = false, updatable = false)
+	private String buildingid;
+	private String describes;//描述
+	private Integer floors;//楼层
 	@ManyToOne(targetEntity = Building.class)
 	@JoinColumn(name = "buildingid",referencedColumnName = "id")
 	private Building building;
-	
-	public String getId() {		
+
+	public String getBuildingid() {
+		return buildingid;
+	}
+
+	public void setBuildingid(String buildingid) {
+		this.buildingid = buildingid;
+	}
+
+	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
 		this.id = id;
 	}
 
-	public String getDescribe() {		
-		return describe;
+	public String getDescribes() {
+		return describes;
 	}
-	public void setDescribe(String describe) {
-		this.describe = describe;
+	public void setDescribes(String describes) {
+		this.describes = describes;
 	}
 
-	public Integer getFloor() {		
-		return floor;
+	public Integer getFloors() {
+		return floors;
 	}
-	public void setFloor(Integer floor) {
-		this.floor = floor;
+	public void setFloors(Integer floors) {
+		this.floors = floors;
 	}
 
 	public Building getBuilding() {
@@ -49,5 +56,16 @@ public class Floor implements Serializable{
 
 	public void setBuilding(Building building) {
 		this.building = building;
+	}
+
+	@Override
+	public String toString() {
+		return "Floor{" +
+				"id='" + id + '\'' +
+				", buildingid='" + buildingid + '\'' +
+				", describe='" + describes + '\'' +
+				", floor=" + floors +
+				", building=" + building.toString() +
+				'}';
 	}
 }

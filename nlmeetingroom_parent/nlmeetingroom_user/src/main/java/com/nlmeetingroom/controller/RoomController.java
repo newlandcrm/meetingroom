@@ -1,6 +1,7 @@
 package com.nlmeetingroom.controller;
 import java.util.Map;
 
+import com.nlmeetingroom.pojo.Floor;
 import com.nlmeetingroom.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -79,6 +80,10 @@ public class RoomController {
 	 */
 	@RequestMapping(method=RequestMethod.POST)
 	public Result add(@RequestBody Room room  ){
+		System.out.println(room.toString());
+		Floor floor=new Floor();
+		floor.setId(room.getFloorid());
+		room.setFloor(floor);
 		roomService.add(room);
 		return new Result(true,StatusCode.OK,"增加成功");
 	}
@@ -90,6 +95,9 @@ public class RoomController {
 	@RequestMapping(value="/{id}",method= RequestMethod.PUT)
 	public Result update(@RequestBody Room room, @PathVariable String id ){
 		room.setId(id);
+		Floor floor=new Floor();
+		floor.setId(room.getFloorid());
+		room.setFloor(floor);
 		roomService.update(room);		
 		return new Result(true,StatusCode.OK,"修改成功");
 	}

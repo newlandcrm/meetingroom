@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="nlmeetindroom_message" />
         <module name="nlmeetingroom_common" />
         <module name="nlmeetingroom_user" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
+      <module name="nlmeetindroom_message" target="1.8" />
       <module name="nlmeetingroom_common" target="1.8" />
       <module name="nlmeetingroom_parent" target="1.8" />
       <module name="nlmeetingroom_user" target="1.8" />

@@ -9,6 +9,7 @@
     <modules>
         <module>nlmeetingroom_common</module>
         <module>nlmeetingroom_user</module>
+        <module>nlmeetindroom_message</module>
     </modules>
     <packaging>pom</packaging>
 	<name>nlmeetingroom_parent</name>

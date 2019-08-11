@@ -16,6 +16,7 @@ import com.nlmeetingroom.pojo.RoomReserve;
 import entity.PageResult;
 import entity.Result;
 import entity.StatusCode;
+
 /**
  * 控制器层
  * @author Administrator
@@ -28,7 +29,22 @@ public class RoomReserveController {
 
 	@Autowired
 	private RoomReserveService roomReserveService;
-	
+	/**
+	 * 预定会议室
+	 */
+	@RequestMapping(value="/reserve",method = RequestMethod.POST)
+	public Result reserve( @RequestBody Map searchMap) throws Exception {
+		roomReserveService.examine(searchMap);
+		return new Result(true,StatusCode.OK,"操作成功");
+	}
+	/**
+	 * 审核
+	 */
+	@RequestMapping(value="/examine",method = RequestMethod.POST)
+	public Result examine( @RequestBody Map searchMap) throws Exception {
+		roomReserveService.examine(searchMap);
+		return new Result(true,StatusCode.OK,"操作成功");
+	}
 	
 	/**
 	 * 查询全部数据

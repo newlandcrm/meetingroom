@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/nlmeetindroom_message/nlmeetindroom_message.iml" filepath="$PROJECT_DIR$/nlmeetindroom_message/nlmeetindroom_message.iml" />
       <module fileurl="file://$PROJECT_DIR$/nlmeetingroom_common/nlmeetingroom_common.iml" filepath="$PROJECT_DIR$/nlmeetingroom_common/nlmeetingroom_common.iml" />
       <module fileurl="file://$PROJECT_DIR$/nlmeetingroom_parent.iml" filepath="$PROJECT_DIR$/nlmeetingroom_parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/nlmeetingroom_user/nlmeetingroom_user.iml" filepath="$PROJECT_DIR$/nlmeetingroom_user/nlmeetingroom_user.iml" />

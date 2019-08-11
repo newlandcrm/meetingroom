@@ -9,6 +9,8 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+import com.nlmeetingroom.dao.BuildingDao;
+import com.nlmeetingroom.pojo.Building;
 import com.nlmeetingroom.pojo.Floor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -31,7 +33,8 @@ public class FloorService {
 
 	@Autowired
 	private FloorDao floorDao;
-	
+	@Autowired
+	private BuildingDao buildingDao;
 	@Autowired
 	private IdWorker idWorker;
 
@@ -83,6 +86,9 @@ public class FloorService {
 	 */
 	public void add(Floor floor) {
 		floor.setId( idWorker.nextId()+"" );
+		floor.setBuildingid(floor.getBuilding().getId());
+		Building building=buildingDao.getOne(floor.getBuilding().getId());
+		floor.setBuilding(building);
 		floorDao.save(floor);
 	}
 
@@ -119,14 +125,14 @@ public class FloorService {
                 	predicateList.add(cb.like(root.get("id").as(String.class), "%"+(String)searchMap.get("id")+"%"));
                 }
                 // 描述
-                if (searchMap.get("describe")!=null && !"".equals(searchMap.get("describe"))) {
-                	predicateList.add(cb.like(root.get("describe").as(String.class), "%"+(String)searchMap.get("describe")+"%"));
+                if (searchMap.get("describes")!=null && !"".equals(searchMap.get("describes"))) {
+                	predicateList.add(cb.like(root.get("describes").as(String.class), "%"+(String)searchMap.get("describes")+"%"));
                 }
                 // 所属楼
                 if (searchMap.get("buildingid")!=null && !"".equals(searchMap.get("buildingid"))) {
                 	predicateList.add(cb.like(root.get("buildingid").as(String.class), "%"+(String)searchMap.get("buildingid")+"%"));
                 }
-				
+
 				return cb.and( predicateList.toArray(new Predicate[predicateList.size()]));
 
 			}

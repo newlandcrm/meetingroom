@@ -79,6 +79,8 @@ public class FloorController {
 	 */
 	@RequestMapping(method=RequestMethod.POST)
 	public Result add(@RequestBody Floor floor  ){
+
+		System.out.println(floor.toString());
 		floorService.add(floor);
 		return new Result(true,StatusCode.OK,"增加成功");
 	}

@@ -5,9 +5,18 @@ spring:
     name: nlmeetingroom-user #指定服务名
   datasource:  
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/meetingroom?useUnicode=true&amp;characterEncoding=UTF8
+    url: jdbc:mysql://114.55.101.174/meetingroom?characterEncoding=UTF8
     username: root
-    password: 986574132a
+    password: 123456
   jpa: 
     database: MySQL
-    show-sql: true
+    show-sql: false
+  rabbitmq:
+      host: 114.55.101.174
+      username: admin
+      password: admin
+      virtual-host: my_vhost
+jwt:
+  config:
+    key: llz123456
+    ttl: 360000

@@ -9,7 +9,9 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+import com.nlmeetingroom.dao.FloorDao;
 import com.nlmeetingroom.pojo.Building;
+import com.nlmeetingroom.pojo.Floor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -31,7 +33,8 @@ public class BuildingService {
 
 	@Autowired
 	private BuildingDao buildingDao;
-	
+	@Autowired
+	private FloorDao floorDao;
 	@Autowired
 	private IdWorker idWorker;
 
@@ -40,10 +43,20 @@ public class BuildingService {
 	 * @return
 	 */
 	public List<Building> findAll() {
-		return buildingDao.findAll();
+
+		List<Building> buildingList = buildingDao.findAll();
+		relateFloor(buildingList);
+		return buildingList;
 	}
 
-	
+	private void relateFloor(List<Building> buildingList) {
+		for (Building building:buildingList) {
+			List<Floor> floors = floorDao.findByBuildingid(building.getId());
+			building.setFloors(floors);
+		}
+	}
+
+
 	/**
 	 * 条件查询+分页
 	 * @param whereMap
@@ -74,9 +87,15 @@ public class BuildingService {
 	 * @return
 	 */
 	public Building findById(String id) {
-		return buildingDao.findById(id).get();
+		Building building = buildingDao.findById(id).get();
+		relateFloor(building);
+		return building;
 	}
 
+	private void relateFloor(Building building) {
+			List<Floor> floors = floorDao.findByBuildingid(building.getId());
+			building.setFloors(floors);
+	}
 	/**
 	 * 增加
 	 * @param building
