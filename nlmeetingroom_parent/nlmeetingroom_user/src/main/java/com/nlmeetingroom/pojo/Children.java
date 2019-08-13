@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Children {
     private String id;
-    private int assetNum;
+    private int asset_num;
     private String name;
     private List<Children> children;
 
@@ -16,12 +16,12 @@ public class Children {
         this.id = id;
     }
 
-    public int getAssetNum() {
-        return assetNum;
+    public int getAsset_num() {
+        return asset_num;
     }
 
-    public void setAssetNum(int assetNum) {
-        this.assetNum = assetNum;
+    public void setAsset_num(int asset_num) {
+        this.asset_num = asset_num;
     }
 
     public String getName() {

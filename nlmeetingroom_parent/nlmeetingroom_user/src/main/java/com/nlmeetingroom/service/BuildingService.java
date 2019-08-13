@@ -189,7 +189,7 @@ public class BuildingService {
 					Children thirdChildren=new Children();
 					thirdChildren.setId(room.getId());
 					thirdChildren.setName(room.getName());
-					thirdChildren.setAssetNum(room.getCapacity());
+					thirdChildren.setAsset_num(room.getCapacity());
 					thirdChildrens.add(thirdChildren);
 					secondAssertNum+=room.getCapacity();
 				}
@@ -197,7 +197,7 @@ public class BuildingService {
 				if(thirdChildrens.size()!=0)
 					secondChildren.setChildren(thirdChildrens);
 				//回填容量
-				secondChildren.setAssetNum(secondAssertNum);
+				secondChildren.setAsset_num(secondAssertNum);
 				secondChildrens.add(secondChildren);
 				firstAssertNum+=secondAssertNum;
 			}
@@ -205,7 +205,7 @@ public class BuildingService {
 				firstChildren.setChildren(secondChildrens);
 
 			//回填容量
-			firstChildren.setAssetNum(firstAssertNum);
+			firstChildren.setAsset_num(firstAssertNum);
 			firstChildrens.add(firstChildren);
 		}
 
