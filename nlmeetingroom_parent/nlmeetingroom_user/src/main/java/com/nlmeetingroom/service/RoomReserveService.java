@@ -61,7 +61,9 @@ public class RoomReserveService {
         Date endTime = DateUtil.transferDateFormat(arrayList.get(1));
         if(StringUtils.isEmpty(userid))
             throw new Exception("请先登录");
-
+        User userTemp = userDao.findById(userid).get();
+        if(userTemp==null)
+            throw new Exception("该账号有错");
         RoomReserve roomReserve=new RoomReserve();
         roomReserve.setId(idWorker.nextId()+"");
         roomReserve.setState(RoomReserve.EXAMINE_STATE_NOT_EXAMINE);
