@@ -9,9 +9,11 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+import com.nlmeetingroom.dao.RoomDao;
 import com.nlmeetingroom.dao.UserDao;
+import com.nlmeetingroom.pojo.Room;
 import com.nlmeetingroom.pojo.User;
-import io.github.isliqian.NiceEmail;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -20,6 +22,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import util.DateUtil;
 import util.IdWorker;
 
 import com.nlmeetingroom.dao.RoomReserveDao;
@@ -36,6 +39,8 @@ public class RoomReserveService {
     @Autowired
     private RoomReserveDao roomReserveDao;
     @Autowired
+    private RoomDao roomDao;
+    @Autowired
     private UserDao userDao;
     @Autowired
     private IdWorker idWorker;
@@ -43,7 +48,37 @@ public class RoomReserveService {
     RabbitTemplate rabbitTemplate;
 
     public static SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    /**
+     * 预约
+     * @param searchMap
+     */
+    public void reserve(Map searchMap) throws Exception {
+        String userid = (String) searchMap.get("userid");
+        String roomid = (String) searchMap.get("roomid");
+        String content = (String) searchMap.get("content");
+        ArrayList<String> arrayList= (ArrayList) searchMap.get("time");
+        Date startTime = DateUtil.transferDateFormat(arrayList.get(0));
+        Date endTime = DateUtil.transferDateFormat(arrayList.get(1));
+        if(StringUtils.isEmpty(userid))
+            throw new Exception("请先登录");
 
+        RoomReserve roomReserve=new RoomReserve();
+        roomReserve.setId(idWorker.nextId()+"");
+        roomReserve.setState(RoomReserve.EXAMINE_STATE_NOT_EXAMINE);
+        roomReserve.setContent(content);
+        roomReserve.setStartdate(startTime);
+        roomReserve.setEnddate(endTime);
+        Room room = roomDao.findById(roomid).get();
+        if(room.getOpenstate()==0){
+            throw new Exception("无法预约：该会议室暂时不开放");
+        }
+        User user=new User();
+        user.setId(userid);
+        roomReserve.setRoom(room);
+        roomReserve.setUser(user);
+        check(roomReserve);
+        roomReserveDao.save(roomReserve);
+    }
     /**
      * 审核
      *
@@ -81,12 +116,12 @@ public class RoomReserveService {
         for (RoomReserve reserve : roomReserves) {
             boolean checkResult = checkTime(roomReserve.getStartdate(), roomReserve.getEnddate(), reserve.getStartdate(), reserve.getEnddate());
             if(checkResult){
-                throw new Exception("该时间段有冲突！");
+                throw new Exception("该时间段与他人已预约的时间有冲突！");
             }
         }
     }
 
-    private static boolean checkTime(Date leftStartDate, Date leftEndDate, Date rightStartDate, Date rightEndDate) {
+    public static boolean checkTime(Date leftStartDate, Date leftEndDate, Date rightStartDate, Date rightEndDate) {
 
         return
         ((leftStartDate.getTime() >= rightStartDate.getTime())

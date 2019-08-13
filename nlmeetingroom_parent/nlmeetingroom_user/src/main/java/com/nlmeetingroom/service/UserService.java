@@ -10,6 +10,8 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+import com.nlmeetingroom.pojo.Department;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -145,7 +147,22 @@ public class UserService {
 	 * @param user
 	 */
 	public void update(User user) {
-		userDao.save(user);
+		User oldUserInfo = userDao.findById(user.getId()).get();
+		if(!StringUtils.isEmpty(user.getNickname())){
+			oldUserInfo.setNickname(user.getNickname());
+		}
+		if(!StringUtils.isEmpty(user.getEmail())){
+			oldUserInfo.setEmail(user.getEmail());
+		}
+		if(!StringUtils.isEmpty(user.getMobile())){
+			oldUserInfo.setMobile(user.getMobile());
+		}
+		if(!StringUtils.isEmpty(user.getDepartment().getId())){
+			Department department = new Department();
+			department.setId(user.getDepartment().getId());
+			oldUserInfo.setDepartment(department);
+		}
+		userDao.save(oldUserInfo);
 	}
 
 	/**

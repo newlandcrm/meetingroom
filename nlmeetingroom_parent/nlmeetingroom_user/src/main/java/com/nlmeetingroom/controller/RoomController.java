@@ -1,4 +1,7 @@
 package com.nlmeetingroom.controller;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 import com.nlmeetingroom.pojo.Floor;
@@ -17,6 +20,8 @@ import com.nlmeetingroom.pojo.Room;
 import entity.PageResult;
 import entity.Result;
 import entity.StatusCode;
+import util.DateUtil;
+
 /**
  * 控制器层
  * @author Administrator
@@ -29,8 +34,19 @@ public class RoomController {
 
 	@Autowired
 	private RoomService roomService;
-	
-	
+
+
+	/**
+	 * 某时间段空闲的会议室
+	 */
+	@RequestMapping(value="/queryFreeRoom",method = RequestMethod.POST)
+	public Result reserve( @RequestBody Map searchMap) throws Exception {
+		ArrayList<String> arrayList= (ArrayList) searchMap.get("time");
+		Date startTime = DateUtil.transferDateFormat(arrayList.get(0));
+		Date endTime = DateUtil.transferDateFormat(arrayList.get(1));
+		List<Room> freeRoomList = roomService.queryFreeRoomBetweenTime(startTime, endTime);
+		return new Result(true,StatusCode.OK,"查询成功",freeRoomList);
+	}
 	/**
 	 * 查询全部数据
 	 * @return

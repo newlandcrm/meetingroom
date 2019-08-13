@@ -1,14 +1,14 @@
 package com.nlmeetingroom.service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+
+import com.nlmeetingroom.pojo.RoomReserve;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -31,9 +31,42 @@ public class RoomService {
 
 	@Autowired
 	private RoomDao roomDao;
+	@Autowired
+	private RoomReserveService roomReserveService;
 	
 	@Autowired
 	private IdWorker idWorker;
+
+
+	public List<Room> queryFreeRoomBetweenTime(Date startTime, Date endTime) {
+		List<Room> allRoomList = findAll();
+		List<Room> freeRoom=new ArrayList<>();
+		Map map;
+		int flag;
+		for (Room room:allRoomList) {
+			if (room.getOpenstate()==0)
+				continue;
+			map=new HashMap();
+			flag=0;
+			map.put("roomid",room.getId());
+			List<RoomReserve> roomReserves = roomReserveService.findSearch(map);
+			for (RoomReserve roomReserve:roomReserves) {
+				if(roomReserve.getState()==RoomReserve.EXAMINE_STATE_SUCCESS||roomReserve.getState()==RoomReserve.EXAMINE_STATE_NOT_EXAMINE){
+					boolean checkResult = RoomReserveService.checkTime(roomReserve.getStartdate(), roomReserve.getEnddate(), startTime, endTime);
+					if(checkResult){
+						flag=1;
+						break;
+					}
+				}
+
+			}
+			if(flag==0){
+				freeRoom.add(room);
+			}
+		}
+		return freeRoom;
+	}
+
 
 	/**
 	 * 查询全部列表
@@ -138,5 +171,7 @@ public class RoomService {
 		};
 
 	}
+
+
 
 }

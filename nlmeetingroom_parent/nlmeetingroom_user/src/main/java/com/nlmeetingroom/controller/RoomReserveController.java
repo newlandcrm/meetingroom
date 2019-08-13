@@ -29,14 +29,7 @@ public class RoomReserveController {
 
 	@Autowired
 	private RoomReserveService roomReserveService;
-	/**
-	 * 预定会议室
-	 */
-	@RequestMapping(value="/reserve",method = RequestMethod.POST)
-	public Result reserve( @RequestBody Map searchMap) throws Exception {
-		roomReserveService.examine(searchMap);
-		return new Result(true,StatusCode.OK,"操作成功");
-	}
+
 	/**
 	 * 审核
 	 */
@@ -88,7 +81,14 @@ public class RoomReserveController {
     public Result findSearch( @RequestBody Map searchMap){
         return new Result(true,StatusCode.OK,"查询成功",roomReserveService.findSearch(searchMap));
     }
-	
+	/**
+	 * 预定会议室
+	 */
+	@RequestMapping(value="/reserve",method = RequestMethod.POST)
+	public Result reserve( @RequestBody Map searchMap) throws Exception {
+		roomReserveService.reserve(searchMap);
+		return new Result(true,StatusCode.OK,"预约成功");
+	}
 	/**
 	 * 增加
 	 * @param roomReserve

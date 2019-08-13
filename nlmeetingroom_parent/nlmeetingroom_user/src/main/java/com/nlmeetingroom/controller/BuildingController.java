@@ -1,4 +1,6 @@
 package com.nlmeetingroom.controller;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,8 @@ import com.nlmeetingroom.service.BuildingService;
 import entity.PageResult;
 import entity.Result;
 import entity.StatusCode;
+import util.DateUtil;
+
 /**
  * 控制器层
  * @author Administrator
@@ -28,7 +32,26 @@ public class BuildingController {
 
 	@Autowired
 	private BuildingService buildingService;
-	
+
+
+
+
+	/**
+	 * 测试
+	 * @param searchMap
+	 * @return
+	 */
+	@RequestMapping(value="/test",method = RequestMethod.POST)
+	public Result test( @RequestBody Map searchMap){
+		System.out.println((ArrayList) searchMap.get("starttime"));
+		ArrayList<String> arrayList= (ArrayList) searchMap.get("starttime");
+		System.out.println(arrayList.get(0));
+		Date date = DateUtil.transferDateFormat(arrayList.get(0));
+		System.out.println(date.getTime());
+		Date date1 = DateUtil.transferDateFormat(arrayList.get(1));
+		System.out.println(date.getTime());
+		return new Result(true,StatusCode.OK,"查询成功");
+	}
 	
 	/**
 	 * 查询全部数据
@@ -103,5 +126,13 @@ public class BuildingController {
 		buildingService.deleteById(id);
 		return new Result(true,StatusCode.OK,"删除成功");
 	}
-	
+	/**
+	 * 查询全部数据
+	 * @return
+	 */
+	@RequestMapping(value ="/getChildren" ,method= RequestMethod.GET)
+	public Result getChildren(){
+
+		return new Result(true,StatusCode.OK,"查询成功",buildingService.getChildren());
+	}
 }

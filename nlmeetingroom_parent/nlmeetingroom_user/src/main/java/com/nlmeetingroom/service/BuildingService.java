@@ -1,6 +1,7 @@
 package com.nlmeetingroom.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -11,7 +12,9 @@ import javax.persistence.criteria.Root;
 
 import com.nlmeetingroom.dao.FloorDao;
 import com.nlmeetingroom.pojo.Building;
+import com.nlmeetingroom.pojo.Children;
 import com.nlmeetingroom.pojo.Floor;
+import com.nlmeetingroom.pojo.Room;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -35,6 +38,11 @@ public class BuildingService {
 	private BuildingDao buildingDao;
 	@Autowired
 	private FloorDao floorDao;
+
+	@Autowired
+	private FloorService floorService;
+	@Autowired
+	private RoomService roomService;
 	@Autowired
 	private IdWorker idWorker;
 
@@ -153,4 +161,55 @@ public class BuildingService {
 
 	}
 
+    public Map getChildren() {
+		Map map=new HashMap();
+		List<Building> allBuildings = findAll();
+		List<Children> firstChildrens=new ArrayList<>();
+		for (Building building:allBuildings) {
+			Children firstChildren=new Children();
+			firstChildren.setId(building.getId());
+			firstChildren.setName(building.getName());
+			int firstAssertNum=0;
+			//floor
+			Map firstMap=new HashMap();
+			firstMap.put("buildingid",building.getId());
+			List<Floor> floors = floorService.findSearch(firstMap);
+			List<Children> secondChildrens=new ArrayList<>();
+			for (Floor floor:floors) {
+				Children secondChildren=new Children();
+				secondChildren.setId(floor.getId());
+				secondChildren.setName(floor.getDescribes());
+				int secondAssertNum=0;
+				//room
+				Map secondMap=new HashMap();
+				secondMap.put("floorid",floor.getId());
+				List<Room> rooms = roomService.findSearch(secondMap);
+				List<Children> thirdChildrens=new ArrayList<>();
+				for (Room room:rooms) {
+					Children thirdChildren=new Children();
+					thirdChildren.setId(room.getId());
+					thirdChildren.setName(room.getName());
+					thirdChildren.setAssetNum(room.getCapacity());
+					thirdChildrens.add(thirdChildren);
+					secondAssertNum+=room.getCapacity();
+				}
+
+				if(thirdChildrens.size()!=0)
+					secondChildren.setChildren(thirdChildrens);
+				//回填容量
+				secondChildren.setAssetNum(secondAssertNum);
+				secondChildrens.add(secondChildren);
+				firstAssertNum+=secondAssertNum;
+			}
+			if(secondChildrens.size()!=0)
+				firstChildren.setChildren(secondChildrens);
+
+			//回填容量
+			firstChildren.setAssetNum(firstAssertNum);
+			firstChildrens.add(firstChildren);
+		}
+
+		map.put("children",firstChildrens);
+		return map;
+    }
 }
