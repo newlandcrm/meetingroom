@@ -38,7 +38,7 @@ public class RoomReserveController {
 	public Result roomReserveDayInfo(@RequestBody Map searchMap) throws Exception {
 		String time = (String) searchMap.get("time");
 		String roomid = (String) searchMap.get("roomid");
-		Date day = DateUtil.str2Date(time);
+		Date day = DateUtil.transferDateFormat(time);
 		return new Result(true,StatusCode.OK,"查询成功",roomReserveService.dayInfo(roomid,day));
 	}
 
