@@ -143,7 +143,7 @@ public class RelatePersonService {
 	}
 
     public void addList(String reserveid, ArrayList<String> arrayList) {
-		relatePersonDao.deleteByReserveid(reserveid);
+		relatePersonDao.deleteByreserveid(reserveid);
 		for (String name:arrayList) {
 			RelatePerson relatePerson = new RelatePerson();
 			relatePerson.setName(name);
