@@ -51,7 +51,15 @@ public class RoomReserveController {
 	public Result findAll(){
 		return new Result(true,StatusCode.OK,"查询成功",roomReserveService.findAll());
 	}
-	
+	/**
+	 * 各个会议室历史预定次数
+	 * @return
+	 */
+	@RequestMapping(value = "hisReserveCount",method= RequestMethod.GET)
+	public Result hisReserveCount(){
+		return new Result(true,StatusCode.OK,"查询成功",roomReserveService.hisReserveCount());
+	}
+
 	/**
 	 * 根据ID查询
 	 * @param id ID

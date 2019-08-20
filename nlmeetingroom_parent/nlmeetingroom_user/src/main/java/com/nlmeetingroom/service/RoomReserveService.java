@@ -12,6 +12,7 @@ import javax.persistence.criteria.Root;
 import com.nlmeetingroom.dao.RoomDao;
 import com.nlmeetingroom.dao.UserDao;
 import com.nlmeetingroom.pojo.Room;
+import com.nlmeetingroom.pojo.RoomHisResCount;
 import com.nlmeetingroom.pojo.User;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -46,6 +47,8 @@ public class RoomReserveService {
     private IdWorker idWorker;
     @Autowired
     RabbitTemplate rabbitTemplate;
+    @Autowired
+    private RoomService roomService;
 
     public static SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     /**
@@ -292,5 +295,20 @@ public class RoomReserveService {
             throw new Exception("系统异常");
         }
 
+    }
+
+    public ArrayList hisReserveCount() {
+        ArrayList<RoomHisResCount> roomHisResCounts = new ArrayList<>();
+        List<Room> rooms = roomService.findAll();
+        for (Room room:rooms) {
+            RoomHisResCount roomHisResCount = new RoomHisResCount();
+            roomHisResCount.setId(room.getId());
+            roomHisResCount.setName(room.getName());
+
+            long count = roomReserveDao.hisReserveCount(room.getId());
+            roomHisResCount.setCount(count);
+            roomHisResCounts.add(roomHisResCount);
+        }
+        return roomHisResCounts;
     }
 }

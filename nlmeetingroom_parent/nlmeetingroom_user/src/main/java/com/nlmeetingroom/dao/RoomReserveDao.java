@@ -17,4 +17,7 @@ public interface RoomReserveDao extends JpaRepository<RoomReserve,String>,JpaSpe
 
     @Query(nativeQuery = true,value = "SELECT * FROM user_room_reserve WHERE roomid=?1 and startdate >= ?2 AND enddate< ?3")
     public List<RoomReserve> oneDayInfo(String roomid, String startDate, String endDate);
+
+    @Query(nativeQuery = true,value = "select count(*) from user_room_reserve where roomid=?1")
+    long hisReserveCount(String roomid);
 }
