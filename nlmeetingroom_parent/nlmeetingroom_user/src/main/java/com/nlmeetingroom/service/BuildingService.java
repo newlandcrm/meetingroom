@@ -146,18 +146,11 @@ public class BuildingService {
 			@Override
 			public Predicate toPredicate(Root<Building> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
 				List<Predicate> predicateList = new ArrayList<Predicate>();
-                // 
-                if (searchMap.get("id")!=null && !"".equals(searchMap.get("id"))) {
-                	predicateList.add(cb.like(root.get("id").as(String.class), "%"+(String)searchMap.get("id")+"%"));
-                }
                 // 楼名
                 if (searchMap.get("name")!=null && !"".equals(searchMap.get("name"))) {
                 	predicateList.add(cb.like(root.get("name").as(String.class), "%"+(String)searchMap.get("name")+"%"));
                 }
-                // 权重
-                if (searchMap.get("sort")!=null && !"".equals(searchMap.get("sort"))) {
-                	predicateList.add(cb.like(root.get("sort").as(String.class), "%"+(String)searchMap.get("sort")+"%"));
-                }
+
 				
 				return cb.and( predicateList.toArray(new Predicate[predicateList.size()]));
 

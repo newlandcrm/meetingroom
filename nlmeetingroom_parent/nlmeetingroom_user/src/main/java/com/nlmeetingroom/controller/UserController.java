@@ -34,11 +34,7 @@ public class UserController {
 	private UserService userService;
 	@Autowired
 	JwtUtil jwtUtil;
-	/**
-	 * 用户登陆
 
-	 * @return
-	 */
 	/**
 	 * 修改密码
 	 * @param
@@ -50,7 +46,11 @@ public class UserController {
 
 		return new Result(true,StatusCode.OK,"修改成功");
 	}
+	/**
+	 * 用户登陆
 
+	 * @return
+	 */
 	@RequestMapping(value="/login",method=RequestMethod.POST)
 	public Result login(@RequestBody Map<String,String> loginMap){
 		User user = userService.loginByUsernameAndPassword(loginMap.get("username"),loginMap.get("password"),"0");

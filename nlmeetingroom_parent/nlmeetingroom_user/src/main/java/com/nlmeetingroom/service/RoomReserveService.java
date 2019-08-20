@@ -9,11 +9,10 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+import com.nlmeetingroom.dao.RelatePersonDao;
 import com.nlmeetingroom.dao.RoomDao;
 import com.nlmeetingroom.dao.UserDao;
-import com.nlmeetingroom.pojo.Room;
-import com.nlmeetingroom.pojo.RoomHisResCount;
-import com.nlmeetingroom.pojo.User;
+import com.nlmeetingroom.pojo.*;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +26,6 @@ import util.DateUtil;
 import util.IdWorker;
 
 import com.nlmeetingroom.dao.RoomReserveDao;
-import com.nlmeetingroom.pojo.RoomReserve;
 
 /**
  * 服务层
@@ -49,6 +47,8 @@ public class RoomReserveService {
     RabbitTemplate rabbitTemplate;
     @Autowired
     private RoomService roomService;
+    @Autowired
+    private RelatePersonDao relatePersonDao;
 
     public static SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     /**
@@ -232,6 +232,7 @@ public class RoomReserveService {
      * @param id
      */
     public void deleteById(String id) {
+        relatePersonDao.deleteByreserveid(id);
         roomReserveDao.deleteById(id);
     }
 
@@ -248,10 +249,6 @@ public class RoomReserveService {
             @Override
             public Predicate toPredicate(Root<RoomReserve> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
                 List<Predicate> predicateList = new ArrayList<Predicate>();
-                // 
-                if (searchMap.get("id") != null && !"".equals(searchMap.get("id"))) {
-                    predicateList.add(cb.like(root.get("id").as(String.class), "%" + (String) searchMap.get("id") + "%"));
-                }
                 // 申请人id
                 if (searchMap.get("userid") != null && !"".equals(searchMap.get("userid"))) {
                     predicateList.add(cb.like(root.get("userid").as(String.class), "%" + (String) searchMap.get("userid") + "%"));

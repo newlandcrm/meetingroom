@@ -185,10 +185,6 @@ public class UserService {
 			@Override
 			public Predicate toPredicate(Root<User> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
 				List<Predicate> predicateList = new ArrayList<Predicate>();
-                // ID
-                if (searchMap.get("id")!=null && !"".equals(searchMap.get("id"))) {
-                	predicateList.add(cb.like(root.get("id").as(String.class), "%"+(String)searchMap.get("id")+"%"));
-                }
                 // 账号
                 if (searchMap.get("username")!=null && !"".equals(searchMap.get("username"))) {
                 	predicateList.add(cb.like(root.get("username").as(String.class), "%"+(String)searchMap.get("username")+"%"));
@@ -197,23 +193,15 @@ public class UserService {
                 if (searchMap.get("mobile")!=null && !"".equals(searchMap.get("mobile"))) {
                 	predicateList.add(cb.like(root.get("mobile").as(String.class), "%"+(String)searchMap.get("mobile")+"%"));
                 }
-                // 密码
-                if (searchMap.get("password")!=null && !"".equals(searchMap.get("password"))) {
-                	predicateList.add(cb.like(root.get("password").as(String.class), "%"+(String)searchMap.get("password")+"%"));
-                }
                 // 昵称
                 if (searchMap.get("nickname")!=null && !"".equals(searchMap.get("nickname"))) {
                 	predicateList.add(cb.like(root.get("nickname").as(String.class), "%"+(String)searchMap.get("nickname")+"%"));
-                }
-                // 头像
-                if (searchMap.get("avatar")!=null && !"".equals(searchMap.get("avatar"))) {
-                	predicateList.add(cb.like(root.get("avatar").as(String.class), "%"+(String)searchMap.get("avatar")+"%"));
                 }
                 // E-Mail
                 if (searchMap.get("email")!=null && !"".equals(searchMap.get("email"))) {
                 	predicateList.add(cb.like(root.get("email").as(String.class), "%"+(String)searchMap.get("email")+"%"));
                 }
-                // 角色：初期暂定0 普通1 管理员 后期再加哥角色表
+                // 角色：
                 if (searchMap.get("roleid")!=null && !"".equals(searchMap.get("roleid"))) {
                 	predicateList.add(cb.like(root.get("roleid").as(String.class), "%"+(String)searchMap.get("roleid")+"%"));
                 }

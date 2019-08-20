@@ -120,10 +120,7 @@ public class FloorService {
 			@Override
 			public Predicate toPredicate(Root<Floor> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
 				List<Predicate> predicateList = new ArrayList<Predicate>();
-                // 
-                if (searchMap.get("id")!=null && !"".equals(searchMap.get("id"))) {
-                	predicateList.add(cb.like(root.get("id").as(String.class), "%"+(String)searchMap.get("id")+"%"));
-                }
+
                 // 描述
                 if (searchMap.get("describes")!=null && !"".equals(searchMap.get("describes"))) {
                 	predicateList.add(cb.like(root.get("describes").as(String.class), "%"+(String)searchMap.get("describes")+"%"));

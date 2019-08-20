@@ -114,23 +114,6 @@ public class RelatePersonService {
 			@Override
 			public Predicate toPredicate(Root<RelatePerson> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
 				List<Predicate> predicateList = new ArrayList<Predicate>();
-                // 
-                if (searchMap.get("id")!=null && !"".equals(searchMap.get("id"))) {
-                	predicateList.add(cb.like(root.get("id").as(String.class), "%"+(String)searchMap.get("id")+"%"));
-                }
-                // 
-                if (searchMap.get("name")!=null && !"".equals(searchMap.get("name"))) {
-                	predicateList.add(cb.like(root.get("name").as(String.class), "%"+(String)searchMap.get("name")+"%"));
-                }
-                // 
-                if (searchMap.get("mobile")!=null && !"".equals(searchMap.get("mobile"))) {
-                	predicateList.add(cb.like(root.get("mobile").as(String.class), "%"+(String)searchMap.get("mobile")+"%"));
-                }
-                // 
-                if (searchMap.get("email")!=null && !"".equals(searchMap.get("email"))) {
-                	predicateList.add(cb.like(root.get("email").as(String.class), "%"+(String)searchMap.get("email")+"%"));
-                }
-                // 
                 if (searchMap.get("reserveid")!=null && !"".equals(searchMap.get("reserveid"))) {
                 	predicateList.add(cb.like(root.get("reserveid").as(String.class), "%"+(String)searchMap.get("reserveid")+"%"));
                 }

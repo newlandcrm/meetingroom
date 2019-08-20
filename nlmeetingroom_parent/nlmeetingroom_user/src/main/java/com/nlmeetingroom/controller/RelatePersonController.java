@@ -51,16 +51,6 @@ public class RelatePersonController {
 	public Result findAll(){
 		return new Result(true,StatusCode.OK,"查询成功",relatePersonService.findAll());
 	}
-	
-	/**
-	 * 根据ID查询
-	 * @param id ID
-	 * @return
-	 */
-	@RequestMapping(value="/{id}",method= RequestMethod.GET)
-	public Result findById(@PathVariable String id){
-		return new Result(true,StatusCode.OK,"查询成功",relatePersonService.findById(id));
-	}
 
 
 	/**
@@ -85,27 +75,8 @@ public class RelatePersonController {
     public Result findSearch( @RequestBody Map searchMap){
         return new Result(true,StatusCode.OK,"查询成功",relatePersonService.findSearch(searchMap));
     }
-	
-	/**
-	 * 增加
-	 * @param relatePerson
-	 */
-	@RequestMapping(method=RequestMethod.POST)
-	public Result add(@RequestBody RelatePerson relatePerson  ){
-		relatePersonService.add(relatePerson);
-		return new Result(true,StatusCode.OK,"增加成功");
-	}
-	
-	/**
-	 * 修改
-	 * @param relatePerson
-	 */
-	@RequestMapping(value="/{id}",method= RequestMethod.PUT)
-	public Result update(@RequestBody RelatePerson relatePerson, @PathVariable String id ){
-		relatePerson.setId(id);
-		relatePersonService.update(relatePerson);		
-		return new Result(true,StatusCode.OK,"修改成功");
-	}
+
+
 	
 	/**
 	 * 删除

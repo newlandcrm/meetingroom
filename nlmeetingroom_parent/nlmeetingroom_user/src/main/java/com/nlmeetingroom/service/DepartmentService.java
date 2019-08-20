@@ -114,17 +114,9 @@ public class DepartmentService {
 			@Override
 			public Predicate toPredicate(Root<Department> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
 				List<Predicate> predicateList = new ArrayList<Predicate>();
-                // 
-                if (searchMap.get("id")!=null && !"".equals(searchMap.get("id"))) {
-                	predicateList.add(cb.like(root.get("id").as(String.class), "%"+(String)searchMap.get("id")+"%"));
-                }
                 // 部门名字
                 if (searchMap.get("name")!=null && !"".equals(searchMap.get("name"))) {
                 	predicateList.add(cb.like(root.get("name").as(String.class), "%"+(String)searchMap.get("name")+"%"));
-                }
-                // 预留字段
-                if (searchMap.get("another")!=null && !"".equals(searchMap.get("another"))) {
-                	predicateList.add(cb.like(root.get("another").as(String.class), "%"+(String)searchMap.get("another")+"%"));
                 }
 				
 				return cb.and( predicateList.toArray(new Predicate[predicateList.size()]));

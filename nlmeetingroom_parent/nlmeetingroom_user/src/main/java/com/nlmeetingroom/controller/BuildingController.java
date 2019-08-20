@@ -42,17 +42,17 @@ public class BuildingController {
 	 * @param searchMap
 	 * @return
 	 */
-	@RequestMapping(value="/test",method = RequestMethod.POST)
-	public Result test( @RequestBody Map searchMap){
-		System.out.println((ArrayList) searchMap.get("starttime"));
-		ArrayList<String> arrayList= (ArrayList) searchMap.get("starttime");
-		System.out.println(arrayList.get(0));
-		Date date = DateUtil.transferDateFormat(arrayList.get(0));
-		System.out.println(date.getTime());
-		Date date1 = DateUtil.transferDateFormat(arrayList.get(1));
-		System.out.println(date.getTime());
-		return new Result(true,StatusCode.OK,"查询成功");
-	}
+//	@RequestMapping(value="/test",method = RequestMethod.POST)
+//	public Result test( @RequestBody Map searchMap){
+//		System.out.println((ArrayList) searchMap.get("starttime"));
+//		ArrayList<String> arrayList= (ArrayList) searchMap.get("starttime");
+//		System.out.println(arrayList.get(0));
+//		Date date = DateUtil.transferDateFormat(arrayList.get(0));
+//		System.out.println(date.getTime());
+//		Date date1 = DateUtil.transferDateFormat(arrayList.get(1));
+//		System.out.println(date.getTime());
+//		return new Result(true,StatusCode.OK,"查询成功");
+//	}
 	
 	/**
 	 * 查询全部数据
@@ -128,7 +128,7 @@ public class BuildingController {
 		return new Result(true,StatusCode.OK,"删除成功");
 	}
 	/**
-	 * 查询全部数据
+	 * 首页数据
 	 * @return
 	 */
 	@RequestMapping(value ="/getChildren" ,method= RequestMethod.GET)
