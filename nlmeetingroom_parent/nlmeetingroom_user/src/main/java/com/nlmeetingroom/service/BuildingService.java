@@ -1,5 +1,6 @@
 package com.nlmeetingroom.service;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -10,6 +11,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nlmeetingroom.dao.FloorDao;
 import com.nlmeetingroom.pojo.Building;
 import com.nlmeetingroom.pojo.Children;
@@ -19,6 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import util.IdWorker;
@@ -45,6 +48,8 @@ public class BuildingService {
 	private RoomService roomService;
 	@Autowired
 	private IdWorker idWorker;
+	@Autowired
+	private RedisTemplate redisTemplate;
 
 	/**
 	 * 查询全部列表
@@ -161,7 +166,14 @@ public class BuildingService {
 
 	}
 
-    public Map getChildren() {
+    public Map getChildren() throws IOException {
+		String children = (String) redisTemplate.opsForValue().get("indexChildren");
+		if(children!=null){
+			System.out.println("从redis获取");
+			ObjectMapper objectMapper = new ObjectMapper();
+			Map map = objectMapper.readValue(children, Map.class);
+			return map;
+		}
 		Map map=new HashMap();
 		List<Building> allBuildings = findAll();
 		List<Children> firstChildrens=new ArrayList<>();
@@ -210,6 +222,10 @@ public class BuildingService {
 		}
 
 		map.put("children",firstChildrens);
+		System.out.println("写入redis");
+		ObjectMapper objectMapper = new ObjectMapper();
+		String string = objectMapper.writeValueAsString(map);
+		redisTemplate.opsForValue().set("indexChildren",string);
 		return map;
     }
 }

@@ -3,6 +3,7 @@ package com.nlmeetingroom.dao;
 import com.nlmeetingroom.pojo.RoomReserve;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
@@ -13,5 +14,7 @@ import java.util.List;
  */
 public interface RoomReserveDao extends JpaRepository<RoomReserve,String>,JpaSpecificationExecutor<RoomReserve>{
     public List<RoomReserve> findByRoomidAndState(String roomid,Integer state);
-	
+
+    @Query(nativeQuery = true,value = "SELECT * FROM user_room_reserve WHERE roomid=?1 and startdate >= ?2 AND enddate< ?3")
+    public List<RoomReserve> oneDayInfo(String roomid, String startDate, String endDate);
 }

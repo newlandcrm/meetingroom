@@ -1,4 +1,5 @@
 package com.nlmeetingroom.controller;
+import java.util.Date;
 import java.util.Map;
 
 import com.nlmeetingroom.service.RoomReserveService;
@@ -16,6 +17,7 @@ import com.nlmeetingroom.pojo.RoomReserve;
 import entity.PageResult;
 import entity.Result;
 import entity.StatusCode;
+import util.DateUtil;
 
 /**
  * 控制器层
@@ -29,15 +31,17 @@ public class RoomReserveController {
 
 	@Autowired
 	private RoomReserveService roomReserveService;
-
 	/**
-	 * 审核
+	 * 获取某日时间某会议室的预约情况
 	 */
-	@RequestMapping(value="/examine",method = RequestMethod.POST)
-	public Result examine( @RequestBody Map searchMap) throws Exception {
-		roomReserveService.examine(searchMap);
-		return new Result(true,StatusCode.OK,"操作成功");
+	@RequestMapping(value = "/roomReserveDayInfo",method = RequestMethod.POST)
+	public Result roomReserveDayInfo(@RequestBody Map searchMap) throws Exception {
+		String time = (String) searchMap.get("time");
+		String roomid = (String) searchMap.get("roomid");
+		Date day = DateUtil.str2Date(time);
+		return new Result(true,StatusCode.OK,"查询成功",roomReserveService.dayInfo(roomid,day));
 	}
+
 	
 	/**
 	 * 查询全部数据
@@ -58,7 +62,14 @@ public class RoomReserveController {
 		return new Result(true,StatusCode.OK,"查询成功",roomReserveService.findById(id));
 	}
 
-
+	/**
+	 * 审核
+	 */
+	@RequestMapping(value="/examine",method = RequestMethod.POST)
+	public Result examine( @RequestBody Map searchMap) throws Exception {
+		roomReserveService.examine(searchMap);
+		return new Result(true,StatusCode.OK,"操作成功");
+	}
 	/**
 	 * 分页+多条件查询
 	 * @param searchMap 查询条件封装

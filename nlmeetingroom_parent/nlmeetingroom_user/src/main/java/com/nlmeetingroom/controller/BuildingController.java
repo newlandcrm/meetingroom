@@ -1,4 +1,5 @@
 package com.nlmeetingroom.controller;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
@@ -131,7 +132,7 @@ public class BuildingController {
 	 * @return
 	 */
 	@RequestMapping(value ="/getChildren" ,method= RequestMethod.GET)
-	public Result getChildren(){
+	public Result getChildren() throws IOException {
 
 		return new Result(true,StatusCode.OK,"查询成功",buildingService.getChildren());
 	}

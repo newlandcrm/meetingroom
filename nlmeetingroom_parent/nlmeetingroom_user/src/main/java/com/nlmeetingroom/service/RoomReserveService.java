@@ -61,9 +61,12 @@ public class RoomReserveService {
         Date endTime = DateUtil.transferDateFormat(arrayList.get(1));
         if(StringUtils.isEmpty(userid))
             throw new Exception("请先登录");
-        User userTemp = userDao.findById(userid).get();
-        if(userTemp==null)
+        try {
+            User userTemp = userDao.findById(userid).get();
+        }catch (Exception e) {
             throw new Exception("该账号有错");
+        }
+
         RoomReserve roomReserve=new RoomReserve();
         roomReserve.setId(idWorker.nextId()+"");
         roomReserve.setState(RoomReserve.EXAMINE_STATE_NOT_EXAMINE);
@@ -81,6 +84,8 @@ public class RoomReserveService {
         check(roomReserve);
         roomReserveDao.save(roomReserve);
     }
+
+
     /**
      * 审核
      *
@@ -268,4 +273,24 @@ public class RoomReserveService {
 
     }
 
+    /**
+     * 获取某日时间某会议室的预约情况
+     * @param
+     */
+    public List<RoomReserve> dayInfo(String roomid, Date day) throws Exception {
+
+        Calendar calendar = new GregorianCalendar();
+        calendar.setTime(day);
+        calendar.add(calendar.DATE,1);
+        Date startDate=day;
+        Date endDate=calendar.getTime();
+        System.out.println(format.format(startDate));
+        System.out.println(format.format(endDate));
+        try {
+            return roomReserveDao.oneDayInfo(roomid,format.format(startDate),format.format(endDate));
+        }catch (Exception e){
+            throw new Exception("系统异常");
+        }
+
+    }
 }

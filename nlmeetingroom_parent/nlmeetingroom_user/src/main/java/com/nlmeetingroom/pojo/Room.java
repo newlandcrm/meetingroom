@@ -1,5 +1,7 @@
 package com.nlmeetingroom.pojo;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.io.Serializable;
 /**
@@ -72,7 +74,6 @@ public class Room implements Serializable{
 	public Floor getFloor() {
 		return floor;
 	}
-
 	public void setFloor(Floor floor) {
 		this.floor = floor;
 	}
