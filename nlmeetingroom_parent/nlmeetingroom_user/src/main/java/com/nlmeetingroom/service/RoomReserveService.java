@@ -14,6 +14,7 @@ import com.nlmeetingroom.dao.RoomDao;
 import com.nlmeetingroom.dao.UserDao;
 import com.nlmeetingroom.pojo.*;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -122,6 +123,10 @@ public class RoomReserveService {
         if (roomReserve.getStartdate().getTime()<curentDate.getTime()){
             throw new Exception("预约时间有误：当前时间已超过预约的开始时间");
         }
+        boolean sameDay = DateUtils.isSameDay(roomReserve.getStartdate(), roomReserve.getEnddate());
+        if(!sameDay){
+            throw new Exception("开始时间与结束时间只能为同一天");
+        }
         List<RoomReserve> roomReserves = roomReserveDao.findByRoomidAndState(roomReserve.getRoom().getId(), RoomReserve.EXAMINE_STATE_SUCCESS);
         for (RoomReserve reserve : roomReserves) {
             boolean checkResult = checkTime(roomReserve.getStartdate(), roomReserve.getEnddate(), reserve.getStartdate(), reserve.getEnddate());
@@ -130,6 +135,7 @@ public class RoomReserveService {
             }
         }
     }
+
 
     public static boolean checkTime(Date leftStartDate, Date leftEndDate, Date rightStartDate, Date rightEndDate) {
 
