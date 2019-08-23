@@ -62,13 +62,6 @@ public class BuildingService {
 		return buildingList;
 	}
 
-	private void relateFloor(List<Building> buildingList) {
-		for (Building building:buildingList) {
-			List<Floor> floors = floorDao.findByBuildingid(building.getId());
-			building.setFloors(floors);
-		}
-	}
-
 
 	/**
 	 * 条件查询+分页
@@ -116,6 +109,7 @@ public class BuildingService {
 	public void add(Building building) {
 		building.setId( idWorker.nextId()+"" );
 		buildingDao.save(building);
+		redisTemplate.delete("indexChildren");
 	}
 
 	/**
@@ -124,6 +118,7 @@ public class BuildingService {
 	 */
 	public void update(Building building) {
 		buildingDao.save(building);
+		redisTemplate.delete("indexChildren");
 	}
 
 	/**
@@ -132,6 +127,7 @@ public class BuildingService {
 	 */
 	public void deleteById(String id) {
 		buildingDao.deleteById(id);
+		redisTemplate.delete("indexChildren");
 	}
 
 	/**
@@ -221,4 +217,10 @@ public class BuildingService {
 		redisTemplate.opsForValue().set("indexChildren",string);
 		return map;
     }
+	private void relateFloor(List<Building> buildingList) {
+		for (Building building:buildingList) {
+			List<Floor> floors = floorDao.findByBuildingid(building.getId());
+			building.setFloors(floors);
+		}
+	}
 }

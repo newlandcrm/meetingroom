@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import util.IdWorker;
@@ -37,7 +38,8 @@ public class FloorService {
 	private BuildingDao buildingDao;
 	@Autowired
 	private IdWorker idWorker;
-
+	@Autowired
+	private RedisTemplate redisTemplate;
 	/**
 	 * 查询全部列表
 	 * @return
@@ -90,6 +92,7 @@ public class FloorService {
 		Building building=buildingDao.getOne(floor.getBuilding().getId());
 		floor.setBuilding(building);
 		floorDao.save(floor);
+		redisTemplate.delete("indexChildren");
 	}
 
 	/**
@@ -98,6 +101,7 @@ public class FloorService {
 	 */
 	public void update(Floor floor) {
 		floorDao.save(floor);
+		redisTemplate.delete("indexChildren");
 	}
 
 	/**
@@ -106,6 +110,7 @@ public class FloorService {
 	 */
 	public void deleteById(String id) {
 		floorDao.deleteById(id);
+		redisTemplate.delete("indexChildren");
 	}
 
 	/**

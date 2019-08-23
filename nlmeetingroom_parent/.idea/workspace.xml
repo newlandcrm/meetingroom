@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e14ae490-bf44-4df6-a52d-99145b78233d" name="Default" comment="新增&#10;    删除预约接口&#10;    获取某日时间的预约情况接口&#10;修改 &#10;    预约接口 校验用户&#10;优化&#10;    Echarts所需数据进行缓存">
+    <list default="true" id="e14ae490-bf44-4df6-a52d-99145b78233d" name="Default" comment="修改日期格式">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/dao/RelatePersonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/dao/RelatePersonDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RelatePersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RelatePersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/BuildingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/BuildingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/FloorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/FloorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RoomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../前台相关接口文档.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../前台相关接口文档.docx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/nlmeetingroom_user/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RelatePersonController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/RelatePersonController.java">
+      <file leaf-file-name="RoomReserveService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RoomReserveService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-69">
-              <caret line="61" column="43" lean-forward="true" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+            <state relative-caret-position="23">
+              <caret line="291" column="40" selection-start-line="291" selection-start-column="40" selection-end-line="291" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,11 +47,74 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RelatePersonService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RelatePersonService.java">
+      <file leaf-file-name="Building.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Building.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="145" column="41" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="41" />
+            <state relative-caret-position="207">
+              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RelatePerson.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/RelatePerson.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlmeetindroom_message/src/main/java/com/nlmeetingroom/MessageApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FloorService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/FloorService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="118" column="14" lean-forward="true" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoomService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RoomService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuildingService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/BuildingService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="111" column="37" selection-start-line="111" selection-start-column="37" selection-end-line="111" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JwtUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_common/src/main/java/util/JwtUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1081">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1748">
+              <caret line="95" column="52" selection-start-line="95" selection-start-column="52" selection-end-line="95" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,23 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RelatePersonDao.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/dao/RelatePersonDao.java">
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoomController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/RoomController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="48" />
+            <state relative-caret-position="200">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -91,6 +144,7 @@
     <findStrings>
       <find>register</find>
       <find>userDao</find>
+      <find>check</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -112,7 +166,6 @@
         <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/config/ApplictionConfig.java" />
         <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/filter/JwtFilter.java" />
         <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/FloorController.java" />
-        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/FloorService.java" />
         <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/dao/FloorDao.java" />
         <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Building.java" />
         <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/RoomReserve.java" />
@@ -123,27 +176,30 @@
         <option value="$PROJECT_DIR$/nlmeetindroom_message/src/main/java/MessageApplication.java" />
         <option value="$PROJECT_DIR$/nlmeetindroom_message/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/User.java" />
-        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/UserController.java" />
         <option value="$PROJECT_DIR$/nlmeetingroom_common/pom.xml" />
-        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/UserService.java" />
-        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/RoomController.java" />
-        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RoomService.java" />
         <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Children.java" />
         <option value="$PROJECT_DIR$/nlmeetingroom_user/pom.xml" />
         <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/BuildingController.java" />
-        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/BuildingService.java" />
         <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Floor.java" />
         <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Room.java" />
         <option value="$PROJECT_DIR$/nlmeetingroom_common/src/main/java/util/DateUtil.java" />
-        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/RoomReserveController.java" />
-        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RoomReserveService.java" />
-        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/dao/RoomReserveDao.java" />
         <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/dao/RoomDao.java" />
         <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/RelatePerson.java" />
-        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/RelatePersonController.java" />
-        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RelatePersonService.java" />
         <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/dao/RelatePersonDao.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/RoomController.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/RoomHisResCount.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/dao/RoomReserveDao.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/BuildingController.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/RelatePersonController.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/RoomReserveController.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/DepartmentService.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RelatePersonService.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/UserService.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RoomReserveService.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/BuildingService.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/FloorService.java" />
+        <option value="$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RoomService.java" />
       </list>
     </option>
   </component>
@@ -221,8 +277,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
+    <option name="x" value="625" />
     <option name="width" value="1215" />
     <option name="height" value="700" />
   </component>
@@ -232,6 +287,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -240,12 +297,55 @@
               <item name="nlmeetingroom_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="nlmeetingroom_parent" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="nlmeetingroom_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlmeetingroom_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="nlmeetingroom_user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlmeetingroom_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlmeetingroom_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="nlmeetingroom_user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlmeetingroom_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlmeetingroom_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="nlmeetingroom_user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlmeetingroom_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlmeetingroom_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="nlmeetingroom_user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlmeetingroom_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlmeetingroom_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="nlmeetingroom_user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="nlmeetingroom" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlmeetingroom_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlmeetingroom_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="nlmeetingroom_user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="nlmeetingroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -255,7 +355,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../meetingRoomManageWeb/ConferencesManagement-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -419,7 +519,13 @@
       <workItem from="1565939612160" duration="48000" />
       <workItem from="1566193440209" duration="4814000" />
       <workItem from="1566260702242" duration="7267000" />
-      <workItem from="1566271476685" duration="2349000" />
+      <workItem from="1566271476685" duration="7671000" />
+      <workItem from="1566303617494" duration="1181000" />
+      <workItem from="1566349719651" duration="12936000" />
+      <workItem from="1566390839928" duration="1348000" />
+      <workItem from="1566435598176" duration="1119000" />
+      <workItem from="1566472688248" duration="1323000" />
+      <workItem from="1566521112807" duration="2509000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1564216066727</created>
@@ -477,11 +583,53 @@
       <option name="project" value="LOCAL" />
       <updated>1566282971888</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="新增&#10;    删除预约接口&#10;    获取某日时间的预约情况接口&#10;修改 &#10;    预约接口 校验用户&#10;优化&#10;    Echarts所需数据进行缓存">
+      <created>1566284969642</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1566284969642</updated>
+    </task>
+    <task id="LOCAL-00010" summary="修改日期格式">
+      <created>1566285534300</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1566285534300</updated>
+    </task>
+    <task id="LOCAL-00011" summary="新增&#10;  各个会议室历史预定次数">
+      <created>1566294847643</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1566294847643</updated>
+    </task>
+    <task id="LOCAL-00012" summary="删除冗余">
+      <created>1566304371009</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1566304371009</updated>
+    </task>
+    <task id="LOCAL-00013" summary="增加校验 预约时间 只能为同一天">
+      <created>1566354842959</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1566354842959</updated>
+    </task>
+    <task id="LOCAL-00014" summary="后台登录校验 提示">
+      <created>1566526624822</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1566526624823</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123636000" />
+    <option name="totallyTimeSpent" value="149374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -504,12 +652,12 @@
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32956153" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.24893919" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49798927" visible="true" weight="0.37340876" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3903819" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49798927" visible="true" weight="0.2446959" />
       <window_info anchor="bottom" id="Spring" order="11" weight="0.3281471" />
       <window_info anchor="bottom" id="CheckStyle" order="12" weight="0.32956153" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.32909605" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.19906166" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2680965" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.3297587" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -524,10 +672,9 @@
     <layout-to-restore>
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49798927" visible="true" weight="0.46534654" />
       <window_info anchor="bottom" id="Spring" order="11" weight="0.3281471" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49798927" visible="true" weight="0.446959" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -535,6 +682,7 @@
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.32909605" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="CheckStyle" order="12" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5020107" side_tool="true" weight="0.33521923" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32956153" />
@@ -542,10 +690,9 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.24893919" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3903819" />
       <window_info anchor="right" id="Maven Projects" order="5" weight="0.36729223" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.17397454" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19906166" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2855228" />
       <window_info anchor="right" id="Database" order="6" weight="0.3297587" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info id="Web" order="6" side_tool="true" />
@@ -553,12 +700,23 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.17397454" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.3297587" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -573,32 +731,16 @@
     <MESSAGE value="新增children、预定会议室、修改个人资料、某时间段空闲的会议室接口" />
     <MESSAGE value="修复assert_num" />
     <MESSAGE value="添加预约 判断userid是否存在的逻辑" />
-    <MESSAGE value="新增&#10;    删除预约接口&#10;    获取某日时间的预约情况接口&#10;修改 &#10;    预约接口 校验用户&#10;优化&#10;    Echarts所需数据进行缓存" />
     <MESSAGE value="解决&#10;   添加相关人员重复的情况" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决&#10;   添加相关人员重复的情况" />
+    <MESSAGE value="新增&#10;    删除预约接口&#10;    获取某日时间的预约情况接口&#10;修改 &#10;    预约接口 校验用户&#10;优化&#10;    Echarts所需数据进行缓存" />
+    <MESSAGE value="修改日期格式" />
+    <MESSAGE value="新增&#10;  各个会议室历史预定次数" />
+    <MESSAGE value="删除冗余" />
+    <MESSAGE value="增加校验 预约时间 只能为同一天" />
+    <MESSAGE value="后台登录校验 提示" />
+    <option name="LAST_COMMIT_MESSAGE" value="后台登录校验 提示" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_common/src/main/java/util/JwtUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/config/ApplicationConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Department.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -624,16 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_parent.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/DepartmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -681,13 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetindroom_message/src/main/java/com/nlmeetingroom/MessageApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nlmeetingroom_common/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
@@ -702,31 +827,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="51" column="46" lean-forward="true" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nlmeetingroom_common/src/main/java/entity/PageResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/FloorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2369">
-          <caret line="131" column="45" selection-start-line="131" selection-start-column="35" selection-end-line="131" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -751,38 +855,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3381">
-          <caret line="168" column="23" selection-start-line="168" selection-start-column="23" selection-end-line="168" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/BuildingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2622">
-          <caret line="136" column="76" selection-start-line="136" selection-start-column="76" selection-end-line="136" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Children.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="8" column="35" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/BuildingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4508">
-          <caret line="226" column="61" selection-start-line="226" selection-start-column="61" selection-end-line="226" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Building.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -800,10 +876,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/RoomReserve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_common/src/main/java/util/DateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/RoomHisResCount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/BuildingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1255">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/DepartmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1232">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/FloorController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
+        <state relative-caret-position="299">
           <caret line="94" column="24" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/DepartmentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="115" column="75" selection-start-line="115" selection-start-column="75" selection-end-line="115" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RelatePersonService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="123" column="10" lean-forward="true" selection-start-line="123" selection-start-column="10" selection-end-line="123" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4025">
+          <caret line="203" column="22" selection-start-line="203" selection-start-column="22" selection-end-line="203" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -828,103 +960,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/dao/UserDao.java">
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/dao/RoomDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/RoomReserve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_common/src/main/java/util/DateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/RoomReserveController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="39" column="57" lean-forward="true" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RoomReserveService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="289" column="42" lean-forward="true" selection-start-line="289" selection-start-column="42" selection-end-line="289" selection-end-column="42" />
+        <state relative-caret-position="138">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/dao/RoomReserveDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+        <state relative-caret-position="368">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/dao/RoomDao.java">
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_parent.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/RelatePerson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-312">
-          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RoomService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="59" column="17" lean-forward="true" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/RoomController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/RelatePersonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="61" column="43" lean-forward="true" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RelatePersonService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="145" column="41" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/dao/RelatePersonDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        <state relative-caret-position="92">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/RoomReserveController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="41" column="73" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/RelatePersonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1081">
+          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/RoomController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1265">
+          <caret line="78" column="76" selection-start-line="78" selection-start-column="76" selection-end-line="78" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/Building.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/pojo/RelatePerson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_common/src/main/java/util/JwtUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1081">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1748">
+          <caret line="95" column="52" selection-start-line="95" selection-start-column="52" selection-end-line="95" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RoomReserveService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="291" column="40" selection-start-line="291" selection-start-column="40" selection-end-line="291" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetindroom_message/src/main/java/com/nlmeetingroom/MessageApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/FloorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="118" column="14" lean-forward="true" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/RoomService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlmeetingroom_user/src/main/java/com/nlmeetingroom/service/BuildingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="111" column="37" selection-start-line="111" selection-start-column="37" selection-end-line="111" selection-end-column="37" />
         </state>
       </provider>
     </entry>

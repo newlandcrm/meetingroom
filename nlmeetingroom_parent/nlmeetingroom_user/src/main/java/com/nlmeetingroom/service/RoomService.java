@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import util.IdWorker;
@@ -36,7 +37,8 @@ public class RoomService {
 	
 	@Autowired
 	private IdWorker idWorker;
-
+	@Autowired
+	private RedisTemplate redisTemplate;
 
 	public List<Room> queryFreeRoomBetweenTime(Date startTime, Date endTime) {
 		List<Room> allRoomList = findAll();
@@ -118,6 +120,7 @@ public class RoomService {
 
 		room.setId( idWorker.nextId()+"" );
 		roomDao.save(room);
+		redisTemplate.delete("indexChildren");
 	}
 
 	/**
@@ -126,6 +129,7 @@ public class RoomService {
 	 */
 	public void update(Room room) {
 		roomDao.save(room);
+		redisTemplate.delete("indexChildren");
 	}
 
 	/**
@@ -134,6 +138,7 @@ public class RoomService {
 	 */
 	public void deleteById(String id) {
 		roomDao.deleteById(id);
+		redisTemplate.delete("indexChildren");
 	}
 
 	/**
