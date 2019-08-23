@@ -90,16 +90,22 @@ public class UserController {
 	}
 
 	@RequestMapping(value="/info",method=RequestMethod.POST)
-	public Result getInfo(@RequestBody Map<String,String> getInfoMap){
+	public Result getInfo(@RequestBody Map<String,String> getInfoMap) throws Exception {
 		String token = getInfoMap.get("token");
-		Claims claims = jwtUtil.parseJWT(token);
-		if(claims==null){
-			return new Result(false,StatusCode.ACCESSERROR,"权限不足");
+		try {
+			Claims claims = jwtUtil.parseJWT(token);
+			if(claims==null){
+				return new Result(false,StatusCode.ACCESSERROR,"权限不足");
+			}
+			String id = claims.getId();
+			User user = userService.findById(id);
+			System.out.println(user.toString());
+			return new Result(true,StatusCode.OK,"success",user);
+		}catch (Exception e){
+			throw new Exception("验证失败,请重新登录");
 		}
-		String id = claims.getId();
-		User user = userService.findById(id);
-		System.out.println(user.toString());
-		return new Result(true,StatusCode.OK,"success",user);
+
+
 
 	}
 	/**
